@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-violet-glow: #8B5CF6;
+  --color-violet-deep: #6D28D9;
+  --color-violet-light: #A78BFA;
+  --color-bg-dark: #0A0A0A;
+  --color-bg-section: #111111;
+  --color-bg-card: #1A1A1A;
+  --color-text-primary: #FAFAFA;
+  --color-text-secondary: #A1A1AA;
+  --color-text-muted: #71717A;
+  --font-family-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-display: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Violet glow effect */
+.glow-violet {
+  box-shadow: 0 0 60px rgba(139, 92, 246, 0.3), 0 0 120px rgba(139, 92, 246, 0.1);
+}
+
+.glow-violet-sm {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.gradient-violet {
+  background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 50%, #4C1D95 100%);
+}
+
+.gradient-text-violet {
+  background: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 50%, #6D28D9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
