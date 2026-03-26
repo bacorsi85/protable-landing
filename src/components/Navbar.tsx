@@ -26,7 +26,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#cta"
+            href="/contacto"
             className="gradient-violet glow-violet-sm rounded-full px-6 py-2.5 text-sm font-semibold text-white transition-all hover:scale-105"
           >
             Empezar gratis
@@ -50,7 +50,7 @@ export default function Navbar() {
                   {l.label}
                 </a>
               ))}
-              <a href="#cta" className="gradient-violet rounded-full px-6 py-3 text-center font-semibold text-white">
+              <a href="/contacto" className="gradient-violet rounded-full px-6 py-3 text-center font-semibold text-white">
                 Empezar gratis
               </a>
             </div>

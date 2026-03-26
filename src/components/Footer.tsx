@@ -25,7 +25,8 @@ export default function Footer() {
           <div>
             <h4 className="mb-4 font-semibold">Contacto</h4>
             <ul className="space-y-2 text-sm text-text-secondary">
-              <li>hola@protable.io</li>
+              <li><a href="/contacto" className="hover:text-white">Formulario de contacto</a></li>
+              <li>contacto@protable.io</li>
               <li>Buenos Aires, Argentina</li>
             </ul>
           </div>

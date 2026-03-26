@@ -47,7 +47,7 @@ export default function Hero() {
           {/* CTAs */}
           <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
-              href="#cta"
+              href="/contacto"
               className="gradient-violet glow-violet group inline-flex items-center gap-2 rounded-full px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105"
             >
               Empezar gratis

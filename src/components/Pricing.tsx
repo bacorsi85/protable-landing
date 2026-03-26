@@ -5,19 +5,21 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "Gratis",
-    period: "30 dias",
-    description: "Ideal para probar sin compromiso.",
-    features: ["Hasta 10 mesas", "Menu digital ilimitado", "QR por mesa", "Pedidos en tiempo real", "1 usuario admin"],
+    price: "$35.000",
+    period: "/mes",
+    trial: "15 dias gratis",
+    description: "Ideal para empezar a digitalizar tu restaurante.",
+    features: ["Hasta 10 mesas", "Menu digital ilimitado", "QR por mesa", "Pedidos en tiempo real", "1 usuario admin", "Comision 3% por transaccion"],
     cta: "Empezar gratis",
     highlighted: false,
   },
   {
     name: "Pro",
-    price: "$50.000",
+    price: "$49.999",
     period: "/mes",
-    description: "Para restaurantes en operacion.",
-    features: ["Mesas ilimitadas", "Todo de Starter", "Split bill", "MercadoPago integrado", "Kanban cocina/barra", "Staff management", "Analytics", "Soporte prioritario"],
+    trial: null,
+    description: "Para restaurantes en operacion que quieren escalar.",
+    features: ["Mesas ilimitadas", "Todo de Starter", "Split bill", "MercadoPago integrado", "Kanban cocina/barra", "Staff management", "Analytics", "Soporte prioritario", "Comision 1.5% por transaccion"],
     cta: "Elegir Pro",
     highlighted: true,
   },
@@ -25,8 +27,9 @@ const plans = [
     name: "Enterprise",
     price: "Custom",
     period: "",
+    trial: null,
     description: "Multi-sucursal y franquicias.",
-    features: ["Todo de Pro", "Multi-tenant", "API access", "White-label", "SLA garantizado", "Account manager dedicado"],
+    features: ["Todo de Pro", "Multi-tenant", "API access", "White-label", "SLA garantizado", "Account manager dedicado", "Comision negociable"],
     cta: "Contactar ventas",
     highlighted: false,
   },
@@ -66,6 +69,11 @@ export default function Pricing() {
                 <span className="text-4xl font-black">{plan.price}</span>
                 <span className="text-text-muted">{plan.period}</span>
               </div>
+              {plan.trial && (
+                <div className="mt-2 inline-block rounded-full bg-violet-glow/10 px-3 py-1 text-xs font-semibold text-violet-light">
+                  {plan.trial}
+                </div>
+              )}
               <ul className="mt-8 space-y-3">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-center gap-3 text-sm">
@@ -75,7 +83,7 @@ export default function Pricing() {
                 ))}
               </ul>
               <a
-                href="#cta"
+                href={plan.name === "Enterprise" ? "/contacto" : "/contacto"}
                 className={`mt-8 block rounded-full py-3 text-center font-semibold transition-all hover:scale-105 ${plan.highlighted ? "gradient-violet text-white glow-violet-sm" : "border border-white/10 text-white hover:border-violet-glow/30"}`}
               >
                 {plan.cta}
