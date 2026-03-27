@@ -4,11 +4,11 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { href: "#features", label: "Funcionalidades" },
-  { href: "#how-it-works", label: "Cómo funciona" },
-  { href: "#restaurants", label: "Restaurantes" },
-  { href: "#pricing", label: "Precios" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#features", label: "Funcionalidades" },
+  { href: "/#how-it-works", label: "Cómo funciona" },
+  { href: "/#restaurants", label: "Restaurantes" },
+  { href: "/#pricing", label: "Precios" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export default function Navbar() {

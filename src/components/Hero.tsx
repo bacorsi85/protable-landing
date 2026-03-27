@@ -59,7 +59,7 @@ export default function Hero() {
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#how-it-works"
+              href="/#how-it-works"
               className="inline-flex items-center gap-2 rounded-full border border-white/10 px-8 py-4 text-lg font-semibold text-white transition-all hover:border-violet-glow/30 hover:bg-white/5"
             >
               Ver cómo funciona
