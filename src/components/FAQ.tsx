@@ -4,12 +4,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
-  { q: "Que necesita el restaurante para empezar?", a: "Solo una conexion a internet y un dispositivo (tablet, notebook o celular) para ver los pedidos. Los clientes usan su propio celular para escanear el QR y pedir." },
-  { q: "El menu digital se puede personalizar?", a: "Si. Podes agregar logo, colores del restaurante, fotos de platos, descripciones, alergenos, y organizar por categorias. Todo desde el panel admin sin tocar codigo." },
-  { q: "Se pueden pausar productos sin tocar el front?", a: "Si. Desde el panel admin podes marcar productos como no disponibles y se ocultan automaticamente del menu digital en tiempo real." },
-  { q: "Como funciona el pago con MercadoPago?", a: "El restaurante conecta su cuenta de MercadoPago via OAuth (3 clicks). Los pagos van directo a la cuenta del restaurante. ProTable nunca toca la plata." },
-  { q: "Necesitan instalar una app los clientes?", a: "No. ProTable funciona como PWA desde el navegador del celular. El cliente escanea el QR y listo, sin descargas ni registros." },
-  { q: "Puedo usar ProTable solo con efectivo?", a: "Si. Existe un modo solo efectivo donde los clientes ven el menu y hacen pedidos, pero pagan al mozo. Podes activar MercadoPago despues." },
+  { q: "¿Qué necesita el restaurante para empezar?", a: "Solo una conexión a internet y un dispositivo (tablet, notebook o celular) para ver los pedidos en cocina y barra. Los clientes usan su propio celular para escanear el QR y pedir. No necesitás comprar ningún hardware especial." },
+  { q: "¿El menú digital se puede personalizar?", a: "Sí. Podés agregar el logo de tu restaurante, tus colores, fotos de platos, descripciones, alérgenos, y organizar por categorías. Tu cliente ve la identidad de tu local, no la de un tercero. Todo se configura desde el panel admin." },
+  { q: "¿Puedo ocultar productos que no están disponibles?", a: "Sí. Desde el panel admin podés marcar productos como no disponibles y se ocultan automáticamente del menú digital en tiempo real. Sin tocar nada más." },
+  { q: "¿Cómo funciona el pago con MercadoPago?", a: "El restaurante conecta su cuenta de MercadoPago en 3 clicks. Los pagos van directo a la cuenta del restaurante. ProTable nunca toca la plata." },
+  { q: "¿El cliente necesita descargar algo?", a: "No. El cliente escanea el QR y entra directo a la carta de tu restaurante desde el navegador de su celular. Sin descargas, sin registros, sin fricciones." },
+  { q: "¿Puedo usar ProTable solo con efectivo?", a: "Sí. Existe un modo solo efectivo donde los clientes ven el menú y hacen pedidos, pero pagan al mozo. Podés activar MercadoPago cuando quieras." },
 ];
 
 export default function FAQ() {

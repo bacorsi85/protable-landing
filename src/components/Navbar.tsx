@@ -29,7 +29,7 @@ export default function Navbar() {
             href="/contacto"
             className="gradient-violet glow-violet-sm rounded-full px-6 py-2.5 text-sm font-semibold text-white transition-all hover:scale-105"
           >
-            Empezar gratis
+            Probá gratis
           </a>
         </div>
         <button className="md:hidden" onClick={() => setOpen(!open)} aria-label="Toggle menu">
@@ -51,7 +51,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a href="/contacto" className="gradient-violet rounded-full px-6 py-3 text-center font-semibold text-white">
-                Empezar gratis
+                Probá gratis
               </a>
             </div>
           </motion.div>

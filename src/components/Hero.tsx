@@ -28,7 +28,7 @@ export default function Hero() {
             className="mb-8 inline-flex items-center gap-2 rounded-full border border-violet-glow/20 bg-violet-glow/5 px-4 py-2 text-sm text-violet-light"
           >
             <Zap className="h-4 w-4" />
-            <span>Sin app · Sin hardware · Sin fricciones</span>
+            <span>Sin descargas · Sin hardware extra · Sin fricciones</span>
           </motion.div>
 
           {/* H1 - SEO optimized */}
@@ -44,13 +44,18 @@ export default function Hero() {
             y aumentá la rotación de mesas. Todo desde el celular del cliente.
           </p>
 
+          {/* White-label callout */}
+          <p className="mx-auto mt-4 max-w-xl text-sm text-violet-light/80">
+            Tu marca, tu experiencia. El cliente ve tu logo, tus colores y tu identidad. Sin marcas de terceros.
+          </p>
+
           {/* CTAs */}
           <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
               href="/contacto"
               className="gradient-violet glow-violet group inline-flex items-center gap-2 rounded-full px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105"
             >
-              Empezar gratis
+              Probá gratis 15 días
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
             <a

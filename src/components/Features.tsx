@@ -1,12 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import { QrCode, ShoppingCart, SplitSquareVertical, CreditCard, LayoutDashboard, Bell, Users, BarChart3 } from "lucide-react";
+import { QrCode, ShoppingCart, SplitSquareVertical, CreditCard, LayoutDashboard, Monitor, Users, BarChart3, Paintbrush } from "lucide-react";
 
 const features = [
   {
     icon: QrCode,
-    title: "QR en mesa sin app ni registro",
-    description: "El cliente escanea el QR, abre el menú y pide. Sin descargas, sin cuentas, sin fricción.",
+    title: "QR en mesa sin descargas ni registro",
+    description: "El cliente escanea el QR y entra directo a la carta de tu restaurante, con tu marca y tus colores. Sin apps, sin cuentas, sin fricción.",
   },
   {
     icon: ShoppingCart,
@@ -24,14 +24,19 @@ const features = [
     description: "QR dinámico, tarjetas y billetera digital. Confirmación instantánea. Sin POS adicional.",
   },
   {
-    icon: LayoutDashboard,
-    title: "Panel de gestión centralizado",
-    description: "Menú, mesas, pedidos, personal y analytics. Todo desde un solo dashboard.",
+    icon: Paintbrush,
+    title: "Tu marca, tu experiencia",
+    description: "Logo, colores y estilo de tu restaurante. El cliente vive la experiencia de tu local, no la de un tercero. 100% white-label.",
   },
   {
-    icon: Bell,
-    title: "Kanban de pedidos en tiempo real",
-    description: "Cocina y barra ven los pedidos en tiempo real. Drag & drop para cambiar estados.",
+    icon: Monitor,
+    title: "Dashboard de pedidos en tiempo real",
+    description: "Cocina y barra monitorean los pedidos en vivo desde cualquier dispositivo. Drag & drop para cambiar estados.",
+  },
+  {
+    icon: LayoutDashboard,
+    title: "Panel de gestión centralizado",
+    description: "Menú, mesas, pedidos, personal y analytics. Todo desde un solo lugar.",
   },
   {
     icon: Users,
@@ -70,7 +75,7 @@ export default function Features() {
           </h2>
           <p className="mt-6 text-lg text-text-secondary">
             Todo lo que tu restaurante necesita para digitalizar la experiencia del comensal.
-            Sin hardware, sin fricciones.
+            Usá los dispositivos que ya tenés.
           </p>
         </div>
 
@@ -79,7 +84,7 @@ export default function Features() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           {features.map((f) => (
             <motion.div
