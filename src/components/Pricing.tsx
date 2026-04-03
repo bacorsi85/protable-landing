@@ -71,31 +71,30 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="relative bg-bg-section py-32">
-      <div className="pointer-events-none absolute right-0 top-0">
-        <div className="h-[400px] w-[400px] rounded-full bg-violet-glow/5 blur-[120px]" />
-      </div>
-      <div className="relative mx-auto max-w-7xl px-6">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-4xl font-black tracking-tight md:text-5xl">
-            Precios <span className="gradient-text-violet">simples</span>
+    <section id="pricing" className="bg-white py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <h2 className="font-[family-name:var(--font-family-display)] text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            Precios simples
           </h2>
-          <p className="mt-6 text-lg text-text-secondary">Sin sorpresas. Sin contratos largos. Cancela cuando quieras.</p>
+          <p className="text-slate-500 text-lg max-w-xl mx-auto">
+            Sin sorpresas. Sin contratos largos. Cancela cuando quieras.
+          </p>
         </div>
 
-        {/* Limited time promo banner */}
-        <div className="mt-10 flex justify-center">
+        {/* 50% OFF banner */}
+        <div className="flex justify-center mb-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-6 py-2.5"
+            className="inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50 px-6 py-2.5"
           >
-            <span className="text-sm font-bold text-red-400 animate-pulse">🔥 50% OFF por tiempo limitado en todos los planes</span>
+            <span className="text-sm font-bold text-red-500 animate-pulse">50% OFF por tiempo limitado en todos los planes</span>
           </motion.div>
         </div>
 
-        <div className="mt-12 grid items-start gap-8 lg:grid-cols-3">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -103,7 +102,11 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`relative rounded-2xl border p-8 overflow-hidden ${plan.highlighted ? "border-violet-glow/40 bg-bg-dark glow-violet scale-105" : "border-white/5 bg-bg-card"}`}
+              className={`relative rounded-2xl border p-6 lg:p-8 flex flex-col overflow-hidden ${
+                plan.highlighted
+                  ? "ring-2 ring-emerald-500 border-emerald-500 shadow-xl md:scale-105 bg-white"
+                  : "border-slate-200 bg-white shadow-sm"
+              }`}
             >
               {/* Diagonal 50% OFF ribbon */}
               <div className="absolute -right-12 top-6 rotate-45 bg-red-500 text-white text-[11px] font-bold py-1.5 px-14 shadow-lg z-10 tracking-wider">
@@ -111,38 +114,51 @@ export default function Pricing() {
               </div>
 
               {plan.highlighted && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full gradient-violet px-4 py-1 text-xs font-bold text-white z-20">
+                <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-emerald-500 px-4 py-1 text-xs font-bold text-white z-20">
                   Mas popular
-                </div>
+                </span>
               )}
-              <h3 className="text-xl font-bold">{plan.name}</h3>
-              <p className="mt-2 text-sm text-text-muted">{plan.description}</p>
-              <div className="mt-6 flex items-baseline gap-1.5">
-                <span className="text-4xl font-black">{plan.price}</span>
-                <span className="text-text-muted">{plan.period}</span>
-                {plan.priceNote && (
-                  <span className="text-sm text-text-muted">{plan.priceNote}</span>
-                )}
+
+              {/* Badge */}
+              <span className={`inline-block self-start text-xs font-semibold px-3 py-1 rounded-full mb-4 ${
+                plan.highlighted ? "bg-emerald-50 text-emerald-700" : "bg-slate-100 text-slate-600"
+              }`}>
+                {plan.name === "Starter" ? "Ideal para empezar" : plan.name === "Enterprise" ? "Multi-local" : ""}
+              </span>
+
+              <h3 className="text-xl font-bold text-slate-900 mb-1">{plan.name}</h3>
+
+              <div className="flex items-baseline gap-1.5 mb-0.5">
+                <p className="text-3xl font-bold text-slate-900">{plan.price}</p>
+                <span className="text-slate-500">{plan.period}</span>
+                {plan.priceNote && <span className="text-sm text-slate-400">{plan.priceNote}</span>}
               </div>
-              {plan.trial && (
-                <div className="mt-2 inline-block rounded-full bg-violet-glow/10 px-3 py-1 text-xs font-semibold text-violet-light">
-                  {plan.trial}
-                </div>
-              )}
-              <ul className="mt-8 space-y-3">
-                {plan.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3 text-sm">
-                    <Check className="h-4 w-4 flex-shrink-0 text-violet-glow mt-0.5" />
-                    <span className="text-text-secondary">{f}</span>
+
+              <p className="text-sm text-slate-400 mb-6">{plan.features[plan.features.length - 1]}</p>
+
+              <ul className="space-y-3 mb-8 flex-1">
+                {plan.features.slice(0, -1).map((feat) => (
+                  <li key={feat} className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                    <span className="text-sm text-slate-600">{feat}</span>
                   </li>
                 ))}
               </ul>
+
               <a
                 href="/contacto"
-                className={`mt-8 block rounded-full py-3 text-center font-semibold transition-all hover:scale-105 ${plan.highlighted ? "gradient-violet text-white glow-violet-sm" : "border border-white/10 text-white hover:border-violet-glow/30"}`}
+                className={`w-full block text-center rounded-lg py-3 font-semibold transition-all hover:scale-[1.02] ${
+                  plan.highlighted
+                    ? "bg-amber-400 hover:bg-amber-500 text-slate-900"
+                    : "border border-slate-300 text-slate-700 hover:bg-slate-50"
+                }`}
               >
                 {plan.cta}
               </a>
+
+              {plan.trial && (
+                <p className="text-xs text-emerald-500 text-center mt-3">{plan.trial}</p>
+              )}
             </motion.div>
           ))}
         </div>

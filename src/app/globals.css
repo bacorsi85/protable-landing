@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-violet-glow: #8B5CF6;
-  --color-violet-deep: #6D28D9;
-  --color-violet-light: #A78BFA;
-  --color-bg-dark: #0A0A0A;
-  --color-bg-section: #111111;
-  --color-bg-card: #1A1A1A;
-  --color-text-primary: #FAFAFA;
-  --color-text-secondary: #A1A1AA;
-  --color-text-muted: #71717A;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-50: #ecfdf5;
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+  --color-bg-dark: #ffffff;
+  --color-bg-section: #f8fafc;
+  --color-bg-card: #ffffff;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
   --font-family-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-family-display: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-display: "Playfair Display", "Inter", system-ui, serif;
 }
 
 html {
@@ -26,29 +28,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Violet glow effect */
-.glow-violet {
-  box-shadow: 0 0 60px rgba(139, 92, 246, 0.3), 0 0 120px rgba(139, 92, 246, 0.1);
+.gradient-emerald {
+  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
 }
 
-.glow-violet-sm {
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
-}
-
-.gradient-violet {
-  background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 50%, #4C1D95 100%);
-}
-
-.gradient-text-violet {
-  background: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 50%, #6D28D9 100%);
+.gradient-text-emerald {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.bg-grid {
-  background-image: 
-    linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
-  background-size: 64px 64px;
 }

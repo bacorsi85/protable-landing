@@ -8,13 +8,13 @@ export const metadata: Metadata = {
     template: "%s | ProTable",
   },
   description:
-    "Menú digital y sistema de pedidos QR para restaurantes. Reduce tiempos de espera, mejora la gestión y aumenta la rotación de mesas. Sin app, sin hardware.",
+    "Menu digital y sistema de pedidos QR para restaurantes. Reduce tiempos de espera, mejora la gestion y aumenta la rotacion de mesas. Sin app, sin hardware.",
   keywords: [
     "sistema pedidos QR",
-    "menú digital restaurante",
+    "menu digital restaurante",
     "pedidos desde mesa",
     "carta digital QR",
-    "gestión restaurantes",
+    "gestion restaurantes",
     "split bill",
     "MercadoPago restaurante",
   ],
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     siteName: "ProTable",
     title: "ProTable - Sistema de pedidos QR para restaurantes",
     description:
-      "Menú digital y pedidos QR. Sin app, sin hardware. Aumentá la rotación de mesas y reducí errores.",
+      "Menu digital y pedidos QR. Sin app, sin hardware. Aumenta la rotacion de mesas y reduci errores.",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "ProTable - Sistema de pedidos QR" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ProTable - Sistema de pedidos QR para restaurantes",
-    description: "Menú digital y pedidos QR. Sin app, sin hardware.",
+    description: "Menu digital y pedidos QR. Sin app, sin hardware.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="canonical" href="https://protable.io" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -60,49 +60,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: "ProTable",
               applicationCategory: "BusinessApplication",
               operatingSystem: "Web",
-              description: "Sistema de pedidos QR para restaurantes con menú digital, split bill y gestión centralizada.",
+              description: "Sistema de pedidos QR para restaurantes con menu digital, split bill y gestion centralizada.",
               offers: { "@type": "Offer", price: 0, priceCurrency: "ARS" },
               url: "https://protable.io",
             }),
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: "¿Qué es un sistema de pedidos QR para restaurantes?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Es una solución donde el cliente escanea un código QR en la mesa, abre el menú digital y realiza pedidos desde su celular sin necesidad de app.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "¿Los clientes necesitan instalar una app?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "No. ProTable funciona como PWA desde el navegador del celular. El cliente escanea el QR y listo.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "¿Puedo actualizar el menú sin reimprimir cartas?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Sí. Gestionás productos, precios y disponibilidad desde el panel admin y el menú se actualiza en tiempo real.",
-                  },
-                },
-              ],
-            }),
-          }}
-        />
       </head>
-      <body className="bg-bg-dark text-text-primary antialiased">{children}</body>
+      <body className="bg-white text-slate-900 antialiased">{children}</body>
     </html>
   );
 }
