@@ -27,7 +27,7 @@ export async function POST(request: Request) {
           <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Nombre</td><td style="padding:8px;border:1px solid #ddd">${nombre}</td></tr>
           <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Email</td><td style="padding:8px;border:1px solid #ddd">${email}</td></tr>
           <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">WhatsApp</td><td style="padding:8px;border:1px solid #ddd">${whatsapp || "No proporcionado"}</td></tr>
-          <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Pagina</td><td style="padding:8px;border:1px solid #ddd">${pagina || "No proporcionada"}</td></tr>
+          <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Página</td><td style="padding:8px;border:1px solid #ddd">${pagina || "No proporcionada"}</td></tr>
         </table>
         <h3>Mensaje:</h3>
         <p style="white-space:pre-wrap">${mensaje}</p>

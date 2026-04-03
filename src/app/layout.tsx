@@ -8,13 +8,13 @@ export const metadata: Metadata = {
     template: "%s | ProTable",
   },
   description:
-    "Menu digital y sistema de pedidos QR para restaurantes. Reduce tiempos de espera, mejora la gestion y aumenta la rotacion de mesas. Sin app, sin hardware.",
+    "Menú digital y sistema de pedidos QR para restaurantes. Reducí tiempos de espera, mejorá la gestión y aumentá la rotación de mesas. Sin app, sin hardware.",
   keywords: [
     "sistema pedidos QR",
-    "menu digital restaurante",
+    "menú digital restaurante",
     "pedidos desde mesa",
     "carta digital QR",
-    "gestion restaurantes",
+    "gestión restaurantes",
     "split bill",
     "MercadoPago restaurante",
   ],
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     siteName: "ProTable",
     title: "ProTable - Sistema de pedidos QR para restaurantes",
     description:
-      "Menu digital y pedidos QR. Sin app, sin hardware. Aumenta la rotacion de mesas y reduci errores.",
+      "Menú digital y pedidos QR. Sin app, sin hardware. Aumentá la rotación de mesas y reducí errores.",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "ProTable - Sistema de pedidos QR" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ProTable - Sistema de pedidos QR para restaurantes",
-    description: "Menu digital y pedidos QR. Sin app, sin hardware.",
+    description: "Menú digital y pedidos QR. Sin app, sin hardware.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: "ProTable",
               applicationCategory: "BusinessApplication",
               operatingSystem: "Web",
-              description: "Sistema de pedidos QR para restaurantes con menu digital, split bill y gestion centralizada.",
+              description: "Sistema de pedidos QR para restaurantes con menú digital, split bill y gestión centralizada.",
               offers: { "@type": "Offer", price: 0, priceCurrency: "ARS" },
               url: "https://protable.io",
             }),

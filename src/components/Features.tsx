@@ -4,11 +4,11 @@ import { QrCode, Scissors, CreditCard, Paintbrush, Printer, BarChart3 } from "lu
 
 const features = [
   { icon: QrCode, title: "QR sin descargas", description: "El cliente escanea y entra directo a la carta. Sin apps, sin registro, sin fricciones." },
-  { icon: Scissors, title: "Split bill nativo", description: "Division de cuenta en 3 modos: partes iguales, por item o monto personalizado. Ningun POS lo tiene." },
-  { icon: CreditCard, title: "MercadoPago integrado", description: "Cobro directo con QR dinamico. OAuth per-tenant, sin intermediarios." },
-  { icon: Paintbrush, title: "100% tu marca", description: "Logo, colores y tipografia de tu restaurante. El cliente nunca ve \"ProTable\"." },
-  { icon: Printer, title: "Impresion automatica", description: "Las comandas van directo a la impresora de cocina y barra. Sin intervencion humana." },
-  { icon: BarChart3, title: "Analytics en tiempo real", description: "Platos mas vendidos, tiempos de preparacion, revenue por mesa. Data para decidir." },
+  { icon: Scissors, title: "Split bill nativo", description: "División de cuenta en 3 modos: partes iguales, por ítem o monto personalizado. Ningún POS lo tiene." },
+  { icon: CreditCard, title: "MercadoPago integrado", description: "Cobro directo con QR dinámico. OAuth por local, sin intermediarios." },
+  { icon: Paintbrush, title: "100% tu marca", description: "Logo, colores y tipografía de tu restaurante. El cliente nunca ve \"ProTable\"." },
+  { icon: Printer, title: "Impresión automática", description: "Las comandas van directo a la impresora de cocina y barra. Sin intervención humana." },
+  { icon: BarChart3, title: "Analytics en tiempo real", description: "Platos más vendidos, tiempos de preparación, facturación por mesa. Data para decidir." },
 ];
 
 export default function Features() {
@@ -17,7 +17,7 @@ export default function Features() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-14">
           <h2 className="font-[family-name:var(--font-family-display)] text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Todo lo que necesitas</h2>
-          <p className="text-slate-500 text-lg">Features que marcan la diferencia</p>
+          <p className="text-slate-500 text-lg">Funcionalidades que marcan la diferencia</p>
         </div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { UtensilsCrossed, Coffee, ClipboardList, PartyPopper } from "lucide-react";
 
 const types = [
-  { icon: UtensilsCrossed, name: "Restaurantes", description: "Menu completo, pedidos en mesa, split bill, tracking en tiempo real." },
-  { icon: Coffee, name: "Bares y cafeterias", description: "Pedidos rapidos, carta de tragos, turnos de alta demanda sin fricciones." },
-  { icon: ClipboardList, name: "Take away y delivery", description: "Walk-in mode: pedidos sin mesa para panaderias, kioscos y food trucks." },
-  { icon: PartyPopper, name: "Eventos y recreacion", description: "Cable parks, playas, festivales. Pedidos desde la reposera." },
+  { icon: UtensilsCrossed, name: "Restaurantes", description: "Menú completo, pedidos en mesa, split bill, tracking en tiempo real." },
+  { icon: Coffee, name: "Bares y cafeterías", description: "Pedidos rápidos, carta de tragos, turnos de alta demanda sin fricciones." },
+  { icon: ClipboardList, name: "Take away y delivery", description: "Walk-in mode: pedidos sin mesa para panaderías, kioscos y food trucks." },
+  { icon: PartyPopper, name: "Eventos y recreación", description: "Cable parks, playas, festivales. Pedidos desde la reposera." },
 ];
 
 export default function RestaurantTypes() {
@@ -15,7 +15,7 @@ export default function RestaurantTypes() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-14">
           <h2 className="font-[family-name:var(--font-family-display)] text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Se adapta a tu formato</h2>
-          <p className="text-slate-500 text-lg">Cualquier tipo de gastronomia</p>
+          <p className="text-slate-500 text-lg">Cualquier tipo de gastronomía</p>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {types.map((t, i) => (

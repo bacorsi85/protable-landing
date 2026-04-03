@@ -29,7 +29,7 @@ export default function ContactoPage() {
 
       setSent(true);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Error al enviar el mensaje. Intenta de nuevo.");
+      setError(err instanceof Error ? err.message : "Error al enviar el mensaje. Intentá de nuevo.");
     } finally {
       setSending(false);
     }
@@ -49,7 +49,7 @@ export default function ContactoPage() {
               Contactanos
             </h1>
             <p className="mt-4 text-lg text-slate-500">
-              Contanos sobre tu restaurante y te ayudamos a empezar.
+              Contanos sobre tu restaurante y te ayudamos a arrancar.
             </p>
           </div>
 
@@ -98,7 +98,7 @@ export default function ContactoPage() {
                 />
               </div>
               <div>
-                <label htmlFor="pagina" className="mb-2 block text-sm font-medium text-slate-700">Pagina del restaurante (Web o Instagram)</label>
+                <label htmlFor="pagina" className="mb-2 block text-sm font-medium text-slate-700">Página del restaurante (Web o Instagram)</label>
                 <input
                   id="pagina" type="text" value={form.pagina}
                   onChange={(e) => handleChange("pagina", e.target.value)}
@@ -112,7 +112,7 @@ export default function ContactoPage() {
                   id="mensaje" rows={4} value={form.mensaje}
                   onChange={(e) => handleChange("mensaje", e.target.value)}
                   className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 resize-none"
-                  placeholder="Contanos sobre tu restaurante, cantidad de mesas, que necesitas..."
+                  placeholder="Contanos sobre tu restaurante, cantidad de mesas, qué necesitás..."
                 />
               </div>
               <button

@@ -19,10 +19,10 @@ export default function Hero() {
             <p className="text-emerald-500 font-semibold text-sm tracking-wide uppercase mb-4">Pedidos QR para restaurantes</p>
             <h1 className="font-[family-name:var(--font-family-display)] text-4xl sm:text-5xl lg:text-[3.4rem] leading-tight font-bold text-slate-900 mb-6">
               Mesas inteligentes.{" "}
-              <span className="text-emerald-500">Servicio mas rapido.</span>
+              <span className="text-emerald-500">Servicio más rápido.</span>
             </h1>
             <p className="text-lg text-slate-500 mb-2 leading-relaxed">
-              Tus clientes escanean, piden y pagan desde su celular. Sin apps, sin esperas, sin errores.
+              Tus clientes escanean, piden y pagan desde su celular. Sin apps. Sin esperas. Sin errores.
             </p>
             <p className="text-emerald-600 italic text-base mb-8">Tu marca, tu experiencia. Sin marcas de terceros.</p>
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 mb-4">
@@ -41,11 +41,11 @@ export default function Hero() {
               <div className="w-full h-8 bg-slate-800 flex items-center justify-center"><div className="w-20 h-4 rounded-full bg-slate-700" /></div>
               <div className="flex-1 w-full p-4 flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-white to-emerald-50/40">
                 <QrCode className="w-16 h-16 text-emerald-500 stroke-[1.5]" />
-                <p className="text-xs text-slate-500 font-medium">Escanea el QR de tu mesa</p>
+                <p className="text-xs text-slate-500 font-medium">Escaneá el QR de tu mesa</p>
                 <div className="w-full space-y-2 mt-2">
                   <div className="bg-white rounded-lg border border-slate-100 p-2 flex items-center gap-2 shadow-sm">
                     <div className="w-8 h-8 rounded bg-amber-100 flex items-center justify-center"><ShoppingBag className="w-4 h-4 text-amber-600" /></div>
-                    <div className="flex-1"><p className="text-[10px] font-semibold text-slate-700">Hamburguesa clasica</p><p className="text-[9px] text-slate-400">$4.500</p></div>
+                    <div className="flex-1"><p className="text-[10px] font-semibold text-slate-700">Hamburguesa clásica</p><p className="text-[9px] text-slate-400">$4.500</p></div>
                   </div>
                   <div className="bg-white rounded-lg border border-slate-100 p-2 flex items-center gap-2 shadow-sm">
                     <div className="w-8 h-8 rounded bg-emerald-100 flex items-center justify-center"><ShoppingBag className="w-4 h-4 text-emerald-600" /></div>

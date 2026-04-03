@@ -33,7 +33,7 @@ export default function Navbar() {
             </a>
           ))}
           <a href="/contacto" className="rounded-full bg-amber-400 hover:bg-amber-500 px-6 py-2.5 text-sm font-semibold text-slate-900 transition-all hover:scale-105">
-            Proba gratis
+            Probá gratis
           </a>
         </div>
         <button className="md:hidden text-slate-900" onClick={() => setOpen(!open)} aria-label="Toggle menu">
@@ -47,7 +47,7 @@ export default function Navbar() {
               {links.map((l) => (
                 <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-slate-600 hover:text-slate-900">{l.label}</a>
               ))}
-              <a href="/contacto" className="rounded-full bg-amber-400 px-6 py-3 text-center font-semibold text-slate-900">Proba gratis</a>
+              <a href="/contacto" className="rounded-full bg-amber-400 px-6 py-3 text-center font-semibold text-slate-900">Probá gratis</a>
             </div>
           </motion.div>
         )}

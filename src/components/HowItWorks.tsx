@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { Settings, QrCode, Smartphone, ChefHat } from "lucide-react";
 
 const steps = [
-  { number: "01", icon: Settings, title: "Configura tu restaurante", description: "Carga tu menu, personaliza colores y logo. En minutos tenes todo listo." },
-  { number: "02", icon: QrCode, title: "Imprimi los QR", description: "Cada mesa tiene su codigo QR unico. El cliente lo escanea con la camara." },
-  { number: "03", icon: Smartphone, title: "El cliente pide solo", description: "Menu digital en el celular. Elige, personaliza y confirma. Sin descargar nada." },
-  { number: "04", icon: ChefHat, title: "Cocina recibe, cliente paga", description: "El pedido llega automaticamente. El cliente paga con MercadoPago o efectivo." },
+  { number: "01", icon: Settings, title: "Configurá tu restaurante", description: "Cargá tu menú, personalizá colores y logo. En minutos tenés todo listo." },
+  { number: "02", icon: QrCode, title: "Imprimí los QR", description: "Cada mesa tiene su código QR único. El cliente lo escanea con la cámara." },
+  { number: "03", icon: Smartphone, title: "El cliente pide solo", description: "Menú digital en el celular. Elige, personaliza y confirma. Sin descargar nada." },
+  { number: "04", icon: ChefHat, title: "Cocina recibe, cliente paga", description: "El pedido llega automáticamente. El cliente paga con MercadoPago o efectivo." },
 ];
 
 export default function HowItWorks() {

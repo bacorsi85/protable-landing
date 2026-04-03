@@ -4,12 +4,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
-  { q: "Que necesita el restaurante para empezar?", a: "Solo una conexion a internet y un dispositivo (tablet, notebook o celular) para ver los pedidos. Los clientes usan su propio celular para escanear el QR. No necesitas comprar hardware." },
-  { q: "El cliente necesita descargar una app?", a: "No. El cliente escanea el QR y entra directo a la carta desde el navegador de su celular. Sin descargas, sin registros." },
-  { q: "Cómo funcionan los pagos?", a: "El restaurante conecta su cuenta de MercadoPago en 3 clicks. Los pagos van directo a tu cuenta. ProTable nunca toca la plata. Tambien podes usar solo efectivo." },
-  { q: "Puedo personalizar el menu y los colores?", a: "Si. Logo, colores, fotos de platos, descripciones, alergenos. Tu cliente ve la identidad de tu local, no la de un tercero. 100% white-label." },
-  { q: "Esto reemplaza a mis mozos?", a: "No. ProTable libera a tu staff de tomar pedidos para que se enfoquen en la atencion y la experiencia. Menos errores, mas eficiencia." },
-  { q: "Puedo usar ProTable junto con mi POS actual?", a: "Si. ProTable no reemplaza tu POS, lo complementa. Los pedidos entran por ProTable y tu cocina los recibe en el Kanban. Podes seguir usando tu sistema de facturacion." },
+  { q: "¿Qué necesita el restaurante para empezar?", a: "Solo una conexión a internet y un dispositivo (tablet, notebook o celular) para ver los pedidos. Los clientes usan su propio celular para escanear el QR. No necesitás comprar hardware." },
+  { q: "¿El cliente necesita descargar una app?", a: "No. El cliente escanea el QR y entra directo a la carta desde el navegador de su celular. Sin descargas, sin registros." },
+  { q: "¿Cómo funcionan los pagos?", a: "El restaurante conecta su cuenta de MercadoPago en 3 clicks. Los pagos van directo a tu cuenta. ProTable nunca toca la plata. También podés usar solo efectivo." },
+  { q: "¿Puedo personalizar el menú y los colores?", a: "Sí. Logo, colores, fotos de platos, descripciones, alérgenos. Tu cliente ve la identidad de tu local, no la de un tercero. 100% white-label." },
+  { q: "¿Esto reemplaza a mis mozos?", a: "No. ProTable libera a tu staff de tomar pedidos para que se enfoquen en la atención y la experiencia. Menos errores, más eficiencia." },
+  { q: "¿Puedo usar ProTable junto con mi POS actual?", a: "Sí. ProTable no reemplaza tu POS, lo complementa. Los pedidos entran por ProTable y tu cocina los recibe en el Kanban. Podés seguir usando tu sistema de facturación." },
 ];
 
 export default function FAQ() {

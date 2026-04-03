@@ -12,15 +12,15 @@ const plans = [
     description: "Ideal para empezar a digitalizar tu restaurante.",
     features: [
       "Hasta 10 mesas",
-      "Menu digital ilimitado",
+      "Menú digital ilimitado",
       "QR por mesa",
       "Pedidos en tiempo real",
       "MercadoPago integrado",
-      "Impresion automatica en cocina/barra",
-      "Staff management (hasta 5 usuarios)",
-      "Analytics basico",
+      "Impresión automática en cocina/barra",
+      "Gestión de staff (hasta 5 usuarios)",
+      "Analytics básico",
       "Soporte por email",
-      "Comision 5% sobre ventas procesadas",
+      "Comisión 5% sobre ventas procesadas",
     ],
     cta: "Empezá gratis",
     highlighted: false,
@@ -31,7 +31,7 @@ const plans = [
     period: "/mes",
     priceNote: "+IVA",
     trial: "15 días gratis",
-    description: "Para restaurantes en operacion que quieren escalar.",
+    description: "Para restaurantes en operación que quieren escalar.",
     features: [
       "Mesas ilimitadas",
       "Todo de Starter +",
@@ -40,10 +40,10 @@ const plans = [
       "Staff ilimitado",
       "Analytics avanzado",
       "Notificaciones por WhatsApp",
-      "Integracion con AFIP (facturacion electronica)",
-      "Walk-in: el cliente pide desde cualquier lugar escaneando un QR unico, ideal para take away, mostrador o eventos",
+      "Integración con AFIP (facturación electrónica)",
+      "Walk-in: el cliente pide desde cualquier lugar escaneando un QR único, ideal para take away, mostrador o eventos",
       "Soporte prioritario",
-      "Comision 3% sobre ventas procesadas",
+      "Comisión 3% sobre ventas procesadas",
     ],
     cta: "Elegí Pro",
     highlighted: true,
@@ -57,12 +57,12 @@ const plans = [
     description: "Multi-sucursal y franquicias.",
     features: [
       "Todo de Pro +",
-      "Multi-tenant",
-      "API access",
+      "Multi-sucursal",
+      "Acceso a API",
       "White-label completo",
       "SLA garantizado",
       "Account manager dedicado",
-      "Comision negociable",
+      "Comisión negociable",
     ],
     cta: "Contactar ventas",
     highlighted: false,
@@ -78,7 +78,7 @@ export default function Pricing() {
             Precios simples
           </h2>
           <p className="text-slate-500 text-lg max-w-xl mx-auto">
-            Sin sorpresas. Sin contratos largos. Cancela cuando quieras.
+            Sin sorpresas. Sin contratos largos. Cancelá cuando quieras.
           </p>
         </div>
 
