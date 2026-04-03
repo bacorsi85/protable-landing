@@ -11,10 +11,10 @@ export default function TermsPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-bg-dark pt-24">
-        <article className="mx-auto max-w-3xl px-6 py-20 prose prose-invert prose-violet">
-          <h1 className="text-4xl font-black gradient-text-violet">Terminos y Condiciones de Uso</h1>
-          <p className="text-text-muted">Ultima actualizacion: 26 de marzo de 2026</p>
+      <main className="min-h-screen bg-white pt-24">
+        <article className="mx-auto max-w-3xl px-6 py-20 prose prose-slate">
+          <h1 className="text-4xl font-black text-slate-900">Terminos y Condiciones de Uso</h1>
+          <p className="text-slate-400">Ultima actualizacion: 26 de marzo de 2026</p>
 
           <h2>1. Aceptacion de Terminos</h2>
           <p>Estos Terminos y Condiciones regulan el uso de la plataforma ProTable, operada por ProTable SAS, con domicilio legal en Buenos Aires, Argentina. Al acceder o utilizar la Plataforma, usted acepta quedar vinculado por estos Terminos.</p>
@@ -48,7 +48,7 @@ export default function TermsPage() {
           <p>Estos Terminos se rigen por las leyes de la Republica Argentina. Cualquier controversia sera sometida a la jurisdiccion de los Tribunales Ordinarios de la Ciudad Autonoma de Buenos Aires.</p>
 
           <h2>10. Contacto</h2>
-          <p>Para consultas legales: <a href="mailto:contacto@protable.io" className="text-violet-glow hover:underline">contacto@protable.io</a></p>
+          <p>Para consultas legales: <a href="mailto:contacto@protable.io" className="text-emerald-500 hover:underline">contacto@protable.io</a></p>
         </article>
       </main>
       <Footer />
