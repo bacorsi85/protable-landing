@@ -11,15 +11,15 @@ export default function Footer() {
             <h4 className="mb-4 font-semibold">Producto</h4>
             <ul className="space-y-2 text-sm text-slate-400">
               <li><a href="/#features" className="hover:text-white transition-colors">Funcionalidades</a></li>
-              <li><a href="/#how-it-works" className="hover:text-white transition-colors">Como funciona</a></li>
+              <li><a href="/#how-it-works" className="hover:text-white transition-colors">Cómo funciona</a></li>
               <li><a href="/#pricing" className="hover:text-white transition-colors">Precios</a></li>
             </ul>
           </div>
           <div>
             <h4 className="mb-4 font-semibold">Legal</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><a href="/terms" className="hover:text-white transition-colors">Terminos y Condiciones</a></li>
-              <li><a href="/privacy" className="hover:text-white transition-colors">Politica de Privacidad</a></li>
+              <li><a href="/terms" className="hover:text-white transition-colors">Términos y Condiciones</a></li>
+              <li><a href="/privacy" className="hover:text-white transition-colors">Política de Privacidad</a></li>
             </ul>
           </div>
           <div>

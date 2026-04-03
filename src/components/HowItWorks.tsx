@@ -14,7 +14,7 @@ export default function HowItWorks() {
     <section id="how-it-works" className="bg-slate-50 py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-14">
-          <h2 className="font-[family-name:var(--font-family-display)] text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Como funciona</h2>
+          <h2 className="font-[family-name:var(--font-family-display)] text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Cómo funciona</h2>
           <p className="text-slate-500 text-lg">De cero a pedidos en 4 pasos</p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">

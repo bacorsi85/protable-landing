@@ -29,10 +29,10 @@ export default function Hero() {
               <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tu@restaurante.com"
                 className="flex-1 rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/40" />
               <button type="submit" className="bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold px-6 py-3 text-sm rounded-lg whitespace-nowrap transition-colors">
-                Empezar gratis
+                Empezá gratis
               </button>
             </form>
-            <p className="text-xs text-slate-400">Sin tarjeta · Sin contratos · 15 dias gratis</p>
+            <p className="text-xs text-slate-400">Sin tarjeta · Sin contratos · 15 días gratis</p>
           </motion.div>
 
           <div className="relative hidden lg:flex items-center justify-center">

@@ -8,7 +8,7 @@ const plans = [
     price: "$49.999",
     period: "/mes",
     priceNote: "+IVA",
-    trial: "15 dias gratis",
+    trial: "15 días gratis",
     description: "Ideal para empezar a digitalizar tu restaurante.",
     features: [
       "Hasta 10 mesas",
@@ -22,7 +22,7 @@ const plans = [
       "Soporte por email",
       "Comision 5% sobre ventas procesadas",
     ],
-    cta: "Empezar gratis",
+    cta: "Empezá gratis",
     highlighted: false,
   },
   {
@@ -30,7 +30,7 @@ const plans = [
     price: "$79.000",
     period: "/mes",
     priceNote: "+IVA",
-    trial: "15 dias gratis",
+    trial: "15 días gratis",
     description: "Para restaurantes en operacion que quieren escalar.",
     features: [
       "Mesas ilimitadas",
@@ -45,7 +45,7 @@ const plans = [
       "Soporte prioritario",
       "Comision 3% sobre ventas procesadas",
     ],
-    cta: "Elegir Pro",
+    cta: "Elegí Pro",
     highlighted: true,
   },
   {
@@ -115,7 +115,7 @@ export default function Pricing() {
 
               {plan.highlighted && (
                 <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-emerald-500 px-4 py-1 text-xs font-bold text-white z-20">
-                  Mas popular
+                  Más popular
                 </span>
               )}
 
