@@ -27,7 +27,7 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "$79.000",
+    price: "$79.999",
     period: "/mes",
     priceNote: "+IVA",
     trial: "15 días gratis",
