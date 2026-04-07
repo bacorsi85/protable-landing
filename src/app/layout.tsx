@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -94,6 +95,7 @@ gtag('config', 'G-CGHYCPVYJH');`}
           />
         </noscript>
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );
