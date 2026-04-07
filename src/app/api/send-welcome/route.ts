@@ -44,9 +44,10 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, sentTo: email });
   } catch (error) {
-    console.error("Error sending welcome email:", error);
+    const msg = error instanceof Error ? error.message : String(error);
+    console.error("Error sending welcome email:", msg, JSON.stringify(error));
     return NextResponse.json(
-      { error: "Error al enviar el email" },
+      { error: "Error al enviar el email", detail: msg },
       { status: 500 }
     );
   }
