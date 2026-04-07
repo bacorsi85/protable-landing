@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { QrCode, Scissors, CreditCard, Paintbrush, Printer, BarChart3 } from "lucide-react";
 
 const features = [
-  { icon: QrCode, title: "QR sin descargas", description: "El cliente escanea y entra directo a la carta. Sin apps, sin registro, sin fricciones." },
-  { icon: Scissors, title: "Split bill nativo", description: "División de cuenta en 3 modos: partes iguales, por ítem o monto personalizado. Ningún POS lo tiene." },
-  { icon: CreditCard, title: "MercadoPago integrado", description: "Cobro directo con QR dinámico. OAuth por local, sin intermediarios." },
+  { icon: QrCode, title: "Tus clientes piden sin instalar nada", description: "Escanean el QR de la mesa y acceden a tu carta. Sin apps, sin registro, sin fricciones." },
+  { icon: Scissors, title: "Dividí la cuenta sin discusiones", description: "Partes iguales, por ítem o monto personalizado. Cada comensal paga su parte desde su celular." },
+  { icon: CreditCard, title: "Cobrá antes de que pidan la cuenta", description: "Pago directo desde la mesa con Mercado Pago. La plata cae en tu cuenta, sin intermediarios." },
   { icon: Paintbrush, title: "100% tu marca", description: "Logo, colores y tipografía de tu restaurante. El cliente nunca ve \"ProTable\"." },
-  { icon: Printer, title: "Impresión automática", description: "Las comandas van directo a la impresora de cocina y barra. Sin intervención humana." },
+  { icon: Printer, title: "El pedido llega a cocina sin pasar por el mozo", description: "Las comandas van directo a la impresora de cocina y barra. Menos errores, más velocidad." },
   { icon: BarChart3, title: "Analytics en tiempo real", description: "Platos más vendidos, tiempos de preparación, facturación por mesa. Data para decidir." },
 ];
 

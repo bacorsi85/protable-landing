@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { QrCode, ShoppingBag, MapPin, DollarSign, CheckCircle, Loader2 } from "lucide-react";
+import { QrCode, ShoppingBag, MapPin, DollarSign, CheckCircle, Loader2, ShieldCheck } from "lucide-react";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
 
@@ -44,7 +44,13 @@ export default function Hero() {
             <p className="text-lg text-slate-500 mb-2 leading-relaxed">
               Más rotación, menos errores, más ventas. Tus clientes piden y pagan desde el celular.
             </p>
-            <p className="text-emerald-600 italic text-base mb-8">Tu marca, tu experiencia. Integrado con Mercado Pago.</p>
+            <div className="flex items-center gap-3 mb-8">
+              <p className="text-emerald-600 italic text-base">Tu marca, tu experiencia.</p>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-50 border border-sky-200 px-3 py-1 text-xs font-semibold text-sky-700">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                Mercado Pago integrado
+              </span>
+            </div>
 
             {status === "success" ? (
               <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="rounded-xl border border-emerald-200 bg-emerald-50 p-6 text-center">
