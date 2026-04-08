@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
     const blogUrl = "https://protable-blog.vercel.app";
     return {
       beforeFiles: [
+        // Blog static assets (CSS, fonts, images)
+        { source: "/_astro/:path*", destination: `${blogUrl}/_astro/:path*` },
+        { source: "/images/blog/:path*", destination: `${blogUrl}/images/blog/:path*` },
         // Blog pages
         { source: "/blog", destination: `${blogUrl}/blog` },
         { source: "/blog/:path*", destination: `${blogUrl}/blog/:path*` },
