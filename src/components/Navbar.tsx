@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { signupUrl, loginUrl } from "@/lib/urls";
 
 const links = [
   { href: "/#features", label: "Funcionalidades" },
@@ -32,7 +33,10 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="/contacto" className="rounded-full bg-amber-400 hover:bg-amber-500 px-6 py-2.5 text-sm font-semibold text-slate-900 transition-all hover:scale-105">
+          <a href={loginUrl()} className="text-sm text-slate-500 transition-colors hover:text-slate-900">
+            Iniciar sesión
+          </a>
+          <a href={signupUrl()} className="rounded-full bg-amber-400 hover:bg-amber-500 px-6 py-2.5 text-sm font-semibold text-slate-900 transition-all hover:scale-105">
             Probá gratis
           </a>
         </div>
@@ -47,7 +51,8 @@ export default function Navbar() {
               {links.map((l) => (
                 <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-slate-600 hover:text-slate-900">{l.label}</a>
               ))}
-              <a href="/contacto" className="rounded-full bg-amber-400 px-6 py-3 text-center font-semibold text-slate-900">Probá gratis</a>
+              <a href={loginUrl()} onClick={() => setOpen(false)} className="text-center text-slate-600 hover:text-slate-900">Iniciar sesión</a>
+              <a href={signupUrl()} className="rounded-full bg-amber-400 px-6 py-3 text-center font-semibold text-slate-900">Probá gratis</a>
             </div>
           </motion.div>
         )}

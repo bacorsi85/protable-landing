@@ -1,36 +1,9 @@
 "use client";
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { QrCode, ShoppingBag, MapPin, DollarSign, CheckCircle, Loader2, ShieldCheck } from "lucide-react";
-
-type FormStatus = "idle" | "sending" | "success" | "error";
+import { QrCode, ShoppingBag, MapPin, DollarSign, ShieldCheck, ArrowRight } from "lucide-react";
+import { signupUrl } from "@/lib/urls";
 
 export default function Hero() {
-  const [form, setForm] = useState({ local: "", whatsapp: "", instagram: "", mesas: "", menu: "" });
-  const [status, setStatus] = useState<FormStatus>("idle");
-
-  const inputClass =
-    "w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/40";
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("sending");
-    try {
-      const res = await fetch("/api/onboarding", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (!res.ok) throw new Error();
-      setStatus("success");
-    } catch {
-      setStatus("error");
-    }
-  };
-
-  const update = (field: string) => (e: React.ChangeEvent<HTMLInputElement>) =>
-    setForm((prev) => ({ ...prev, [field]: e.target.value }));
-
   return (
     <section className="relative bg-white pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,39 +25,24 @@ export default function Hero() {
               </span>
             </div>
 
-            {status === "success" ? (
-              <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="rounded-xl border border-emerald-200 bg-emerald-50 p-6 text-center">
-                <CheckCircle className="w-10 h-10 text-emerald-500 mx-auto mb-3" />
-                <p className="text-lg font-semibold text-slate-900 mb-1">¡Recibimos tu solicitud!</p>
-                <p className="text-sm text-slate-500">En 24 horas te contactamos por WhatsApp con tu cuenta lista para probar.</p>
-              </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <input type="text" required value={form.local} onChange={update("local")} placeholder="Nombre del local" className={inputClass} />
-                <div className="grid grid-cols-2 gap-3">
-                  <input type="tel" required value={form.whatsapp} onChange={update("whatsapp")} placeholder="WhatsApp (con código de área)" className={inputClass} />
-                  <input type="number" required min="1" value={form.mesas} onChange={update("mesas")} placeholder="Cantidad de mesas" className={inputClass} />
-                </div>
-                <input type="text" required value={form.instagram} onChange={update("instagram")} placeholder="Instagram o sitio web" className={inputClass} />
-                <input type="text" value={form.menu} onChange={update("menu")} placeholder="Link al menú (Google Drive, web, etc.)" className={inputClass} />
-                <p className="text-xs text-slate-400">¿No tenés link? Mandá tu carta a contacto@protable.io</p>
-                <button
-                  type="submit"
-                  disabled={status === "sending"}
-                  className="w-full bg-amber-400 hover:bg-amber-500 disabled:opacity-60 text-slate-900 font-semibold px-6 py-3.5 text-sm rounded-lg transition-colors flex items-center justify-center gap-2"
-                >
-                  {status === "sending" ? (
-                    <><Loader2 className="w-4 h-4 animate-spin" /> Enviando...</>
-                  ) : (
-                    "Quiero probarlo"
-                  )}
-                </button>
-                {status === "error" && (
-                  <p className="text-xs text-red-500 text-center">Error al enviar. Intentá de nuevo o escribinos por WhatsApp.</p>
-                )}
-                <p className="text-xs text-slate-400 text-center">30 días gratis · Sin tarjeta · Operativo en 24 horas</p>
-              </form>
-            )}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href={signupUrl()}
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold px-6 py-3.5 text-base transition-all hover:scale-[1.02] group"
+              >
+                Crear cuenta gratis
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+              </a>
+              <a
+                href="#how-it-works"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold px-6 py-3.5 text-base transition-colors"
+              >
+                Ver cómo funciona
+              </a>
+            </div>
+            <p className="text-xs text-slate-400 mt-4">
+              30 días gratis · Sin tarjeta · Operativo al instante
+            </p>
           </motion.div>
 
           <div className="relative hidden lg:flex items-center justify-center">
