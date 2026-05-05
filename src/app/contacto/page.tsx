@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
-import { Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import { Send, Loader2, CheckCircle2, AlertCircle, Sparkles, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { signupUrl } from "@/lib/urls";
 
 export default function ContactoPage() {
   const [sending, setSending] = useState(false);
@@ -46,11 +47,28 @@ export default function ContactoPage() {
         <div className="mx-auto max-w-2xl px-6 py-20">
           <div className="text-center">
             <h1 className="text-4xl font-black tracking-tight md:text-5xl text-slate-900">
-              Contactanos
+              Hablá con ventas
             </h1>
             <p className="mt-4 text-lg text-slate-500">
-              Contanos sobre tu restaurante y te ayudamos a arrancar.
+              Para multi-sucursal, franquicias o necesidades especiales. Te respondemos en menos de 24hs.
             </p>
+          </div>
+
+          <div className="mt-10 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 flex items-start gap-3">
+            <Sparkles className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+            <div className="flex-1">
+              <p className="font-semibold text-slate-900">¿Querés probar gratis?</p>
+              <p className="text-sm text-slate-600 mt-0.5">
+                No necesitás llenar este formulario. Creá tu cuenta y empezá a usar ProTable en 30 segundos.
+              </p>
+              <a
+                href={signupUrl()}
+                className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 hover:text-emerald-800"
+              >
+                Crear cuenta gratis
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
           </div>
 
           {sent ? (

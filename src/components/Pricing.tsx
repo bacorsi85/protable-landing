@@ -1,10 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { signupUrl } from "@/lib/urls";
 
 const plans = [
   {
     name: "Starter",
+    href: signupUrl("starter"),
     price: "$15.000",
     period: "/mes",
     priceNote: null,
@@ -26,6 +28,7 @@ const plans = [
   },
   {
     name: "Pro",
+    href: signupUrl("pro"),
     price: "$25.000",
     period: "/mes",
     priceNote: null,
@@ -50,6 +53,7 @@ const plans = [
   },
   {
     name: "Enterprise",
+    href: "/contacto",
     price: "Custom",
     period: "",
     priceNote: null,
@@ -151,7 +155,7 @@ export default function Pricing() {
               </ul>
 
               <a
-                href="/contacto"
+                href={plan.href}
                 className={`w-full block text-center rounded-lg py-3 font-semibold transition-all hover:scale-[1.02] ${
                   plan.highlighted
                     ? "bg-amber-400 hover:bg-amber-500 text-slate-900"
